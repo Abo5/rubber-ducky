@@ -2,7 +2,7 @@ require File.expand_path('lib/rubber-ducky/version', __dir__)
 
 Gem::Specification.new do |spec|
   spec.name          = 'rubber-ducky'
-  spec.version       = spec.version       = '1.1'
+  spec.version       = spec.version       = '1.2'
   spec.authors       = 'MAVEN'
   spec.email         = 'aszda33@gmail.com'
   spec.summary       = 'A Ruby library for encoding and decoding Rubber Ducky scripts.'
@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
 
   # Define runtime and development dependencies
   spec.add_runtime_dependency 'json', '~> 2.0'
-  spec.add_runtime_dependency 'base64', '~> 2.7.1'
+
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'rake', '~> 13.0'
