@@ -1,0 +1,55 @@
+# Ignore bundler config
+/.bundle
+
+# Ignore the installed gems
+/vendor/bundle
+
+# Ignore the Gemfile.lock, since it's usually generated and not necessary to track
+/Gemfile.lock
+
+# Ignore log files and temp files
+/log/*
+/tmp/*
+!/log/.keep
+
+# Ignore compiled output
+/*.o
+/*.so
+/*.log
+/*.out
+/*.bin
+
+# Ignore test coverage files
+/coverage/
+
+# Ignore spec and test files
+/spec/tmp/
+/spec/*.bin
+
+# Ignore IDE files
+.idea/
+.vscode/
+
+# Ignore system files
+.DS_Store
+
+# Ignore Ruby-specific files
+.ruby-version
+.ruby-gemset
+
+# Ignore Rake files
+/rdoc/
+/.rake_tasks~
+
+# Ignore the gem build artifacts
+/pkg/
+rubber-ducky-*.gem
+
+# Ignore byebug history file
+.byebug_history
+
+# Ignore dotenv environment variable files
+.env
+
+# Ignore node_modules if any JavaScript is used
+/node_modules/

