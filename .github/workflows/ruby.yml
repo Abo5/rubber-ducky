@@ -1,12 +1,10 @@
-name: Ruby CI
+name: Build + Publish
 
 on:
   push:
     branches:
       - main
   pull_request:
-    branches:
-      - main
 
 jobs:
   build:
@@ -14,10 +12,10 @@ jobs:
 
     strategy:
       matrix:
-        ruby-version: [2.7.0, 3.3.1]
+        ruby-version: ['2.7.8', '3.2.2']
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -29,3 +27,8 @@ jobs:
 
     - name: Run tests
       run: bundle exec rspec
+
+    - name: Build and publish
+      run: gem build rubber-ducky.gemspec && gem push rubber-ducky-*.gem
+      env:
+        RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
