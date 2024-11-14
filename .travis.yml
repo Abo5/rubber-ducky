@@ -1,0 +1,28 @@
+language: ruby
+rvm:
+  - 3.0.0
+  - 2.7.2
+
+# Run the script only on the default branch (usually master/main)
+branches:
+  only:
+    - main
+
+# Install dependencies
+before_install:
+  - gem install bundler
+
+# Run the script
+script:
+  - bundle exec rspec
+
+# Cache bundler dependencies to speed up future builds
+cache: bundler
+
+# Notifications (optional)
+notifications:
+  email:
+    recipients:
+      - qppn@hotmail.com
+    on_success: change
+    on_failure: always
