@@ -17,9 +17,7 @@ module Rubber
           decoded_key = nil
           duck_decoded = ducky_hex[i, 4]
 
-          # التحقق من DELAY
           if duck_decoded == "00FF"
-            # التعامل مع التأخير
             delay_value = 0
             while duck_decoded == "00FF"
               delay_value += 255
@@ -39,7 +37,6 @@ module Rubber
             next
           end
 
-          # البحث عن المفتاح في ملف اللغة
           lang_file.each do |key, value|
             begin
               new_value = value.split(',')
@@ -81,7 +78,6 @@ module Rubber
               decoded_bin += "#{decoded_key}\n"
             end
           else
-            # رمز غير معروف
             if current_string != ""
               decoded_bin += "STRING #{current_string}\n"
               current_string = ""
@@ -92,7 +88,6 @@ module Rubber
           i += 4
         end
 
-        # إضافة السلسلة النصية المتبقية إن وجدت
         if current_string != ""
           decoded_bin += "STRING #{current_string}\n"
         end

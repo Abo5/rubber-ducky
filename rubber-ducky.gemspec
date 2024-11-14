@@ -2,7 +2,7 @@ require File.expand_path('lib/rubber-ducky/version', __dir__)
 
 Gem::Specification.new do |spec|
   spec.name          = 'rubber-ducky'
-  spec.version       = '1.5'
+  spec.version       = '1.6'
   spec.authors       = 'MAVEN'
   spec.summary       = 'A Ruby library for encoding and decoding Rubber Ducky scripts.'
   spec.description   = 'This gem allows you to encode and decode Rubber Ducky scripts for penetration testing purposes.'
