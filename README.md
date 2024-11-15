@@ -175,3 +175,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Whether you're automating tasks with a Rubber Ducky or exploring new ways to interact with devices, the `rubber-ducky` Ruby library offers a powerful and flexible toolset to get the job done. Happy coding!
 # rubber-ducky
+# rubber-ducky
